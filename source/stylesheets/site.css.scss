@@ -1,0 +1,72 @@
+@charset "utf-8";
+@import "reset";
+
+body, html{
+  background-color: #111111;
+  height:100%;
+}
+
+.anarchy{
+  height:100%;
+  display:flex;
+  align-content:center;
+  align-items:center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.🕶{
+  margin:0 auto;
+  height: 50px; width:200px;
+}
+
+#title{
+  font-family: Gilroy-ExtraBold;
+  font-size: 43px;
+  color: #FFFFFF;
+  position: relative;
+}
+
+#title span{
+  display: inline-block;
+  width: 9px; height:9px;
+  background-color: #fff;
+  position: absolute;
+  bottom:7px;
+  right:30px;
+}
+
+h2{
+  font-family: Gilroy-ExtraBold;
+  font-size: 16px;
+  color: #FFFFFF;
+  width:200px;
+}
+
+ul{
+  display: block;
+  list-style: none;
+}
+
+ul li{
+  list-style:none;
+  color: #fff;
+  font-family: Gilroy-ExtraBold;
+  font-size: 14px;
+  display: block;
+}
+
+.bestFooterEver{
+  position: fixed;
+  bottom:20px; left: 15px;
+  font-family: Gilroy-Light;
+  color: #7E7E7E;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+.bestFooterEver p{
+  line-height: 18px;
+}
+.thisIsAwesome{
+  font-family: Gilroy-ExtraBold;
+}
