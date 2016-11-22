@@ -23,6 +23,8 @@ configure :development do
   activate :livereload
 end
 
+set :build_dir, 'docs'
+
 set :css_dir, 'stylesheets'
 set :fonts_dir, 'fonts'
 set :images_dir, 'images'
