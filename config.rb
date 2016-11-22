@@ -23,46 +23,14 @@ configure :development do
   activate :livereload
 end
 
-###
-# Helpers
-###
-
-# Methods defined in the helpers block are available in templates
-# helpers do
-#   def some_helper
-#     "Helping"
-#   end
-# end
-
-activate :deploy do |deploy|
-  deploy.method = :git
-  deploy.build_before = true
-  deploy.branch   = "master"
-  deploy.remote   = "git@github.com:baloran/baloran.github.io.git"
-end
-
-activate :directory_indexes
+set :css_dir, 'stylesheets'
+set :fonts_dir, 'fonts'
+set :images_dir, 'images'
+set :partials_dir, 'partials'
 
 configure :build do
-  activate :minify_css
-  activate :minify_javascript
-  # activate :relative_assets
-  # activate :cache_buster
   activate :asset_hash
-
-  # Favicon generator
-  # https://github.com/follmann/middleman-favicon-maker
-=begin
-  activate :favicon_maker do |f|
-    f.template_dir  = File.join(root, 'source/assets/img')
-    f.output_dir    = File.join(root, 'build')
-    f.icons = {
-      "favicon.ico" => [
-        { icon: "favicon.ico", size: "32x32,16x16" },
-      ]
-    }
-  end
-=end
-  # Alt image path
-  # set :http_prefix, "/Content/images/"
+  activate :minify_css
+  activate :minify_html
+  activate :minify_javascript, inline: true
 end
